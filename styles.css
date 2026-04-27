@@ -642,12 +642,12 @@ a:hover {
   min-width: 640px;
 }
 
-.diagram-flow-svg--vertex {
-  min-width: 600px;
-}
-
 .diagram-flow-svg--project {
   min-width: 560px;
+}
+
+.diagram-flow-svg--skill {
+  min-width: 720px;
 }
 
 .diagram-flow-svg .flow-t {
@@ -864,9 +864,9 @@ a:hover {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
   .project-cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
