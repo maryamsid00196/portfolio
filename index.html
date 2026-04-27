@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,7 +50,7 @@
           <div class="hero-photo-frame">
             <img
               class="hero-photo"
-              src="assets/hero-portrait.png"
+              src="/assets/hero-portrait.png"
               alt="Maryam Siddiqui at the Youth &amp; AI Summit, Riyadh, beside the event banner"
               width="900"
               height="1200"
@@ -208,8 +208,8 @@
           <div class="arch-panel">
             <h3 class="diagram-block-title">Architecture diagram</h3>
             <figure class="diagram-figure diagram-surface">
-              <a href="assets/quran-verification-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame diagram-frame--dark">
-                <img src="assets/quran-verification-architecture.png" alt="Quranic verification: image of ayat into AWS Flask with dictionary, text processing, LCS error detection, OpenCV overlays; Google Vision OCR path; outputs processed image and extracted mistakes" loading="lazy" decoding="async" />
+              <a href="/assets/quran-verification-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame diagram-frame--dark">
+                <img src="/assets/quran-verification-architecture.png" alt="Quranic verification: image of ayat into AWS Flask with dictionary, text processing, LCS error detection, OpenCV overlays; Google Vision OCR path; outputs processed image and extracted mistakes" loading="lazy" decoding="async" />
               </a>
               <figcaption class="diagram-caption">Updated architecture: AWS and Flask boundaries, Vision OCR, LCS vs source of truth, OpenCV plotting. Dark canvas diagram—click to open full size.</figcaption>
               <ul class="diagram-legend diagram-legend--compact" aria-label="Legend for diagram colors">
@@ -284,8 +284,8 @@
           <div class="arch-panel">
             <h3 class="diagram-block-title">Architecture diagram</h3>
             <figure class="diagram-figure diagram-surface">
-              <a href="assets/slack-bot-cdk-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame">
-                <img src="assets/slack-bot-cdk-architecture.png" alt="CDK stack diagram: ingestion with User Slack API Gateway and Auth Lambda; AI core with Orchestrator Bedrock OpenSearch and data masking; environments PROD QA DEMO with Lambdas; footer CDK cross-account IAM GitHub Actions CloudWatch" loading="lazy" decoding="async" />
+              <a href="/assets/slack-bot-cdk-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame">
+                <img src="/assets/slack-bot-cdk-architecture.png" alt="CDK stack diagram: ingestion with User Slack API Gateway and Auth Lambda; AI core with Orchestrator Bedrock OpenSearch and data masking; environments PROD QA DEMO with Lambdas; footer CDK cross-account IAM GitHub Actions CloudWatch" loading="lazy" decoding="async" />
               </a>
               <figcaption class="diagram-caption">Stack boundaries and data flow (open image for full size). <strong>Solid lines:</strong> primary request path. <strong>Dashed lines:</strong> responses and retrieval loops where shown in source.</figcaption>
               <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
@@ -320,18 +320,13 @@
             <h3>Skill Assessment API</h3>
             <p class="project-stack">FastAPI · OpenAI</p>
             <p>GPT-driven interactive assessments, gap analysis, readiness scoring, learning paths, and LLM output evaluation for answer quality.</p>
+            <p class="project-diagram-link"><a href="#skill-assessment-api">Architecture diagram ↓</a></p>
           </li>
           <li class="project-card">
             <h3>DeepFakeNet</h3>
             <p class="project-stack">Django · FSGAN</p>
             <p>Production face-swapping platform with auth, PostgreSQL, media processing, pytest, and CI/CD.</p>
             <p class="project-diagram-link"><a href="#deepfake-net">Architecture diagram ↓</a></p>
-          </li>
-          <li class="project-card">
-            <h3>Vertex AI Talent Mapping Engine</h3>
-            <p class="project-stack">Vertex AI · FastAPI · Cloud Run · Pub/Sub</p>
-            <p>Candidate-to-role matching with embeddings and semantic search; Vertex AI Matching Engine plus FastAPI on Cloud Run with Pub/Sub triggers for real-time updates.</p>
-            <p class="project-diagram-link"><a href="#vertex-talent-mapping">Architecture overview ↓</a></p>
           </li>
           <li class="project-card">
             <h3>Tech Pack Generator</h3>
@@ -388,8 +383,8 @@
             <div class="arch-panel">
               <h4 class="diagram-block-title">Architecture diagram</h4>
               <figure class="diagram-figure diagram-surface diagram-surface--snug">
-                <a href="assets/deepfake-net-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame">
-                  <img src="assets/deepfake-net-architecture.png" alt="DeepFakeNet architecture: browser client, Django 5 URL router, auth views, forms, main views, AI engine FSGAN, templates, static assets, PostgreSQL, env config" loading="lazy" decoding="async" />
+                <a href="/assets/deepfake-net-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame">
+                  <img src="/assets/deepfake-net-architecture.png" alt="DeepFakeNet architecture: browser client, Django 5 URL router, auth views, forms, main views, AI engine FSGAN, templates, static assets, PostgreSQL, env config" loading="lazy" decoding="async" />
                 </a>
                 <figcaption class="diagram-caption">Full pastel diagram—click to open. <strong>Solid</strong> lines: primary request flow; <strong>dashed</strong>: responses/config where drawn in source.</figcaption>
                 <ul class="diagram-legend diagram-legend--compact" aria-label="Diagram legend">
@@ -410,78 +405,84 @@
           </div>
         </div>
 
-        <div id="vertex-talent-mapping" class="project-diagram-block">
-          <h3 class="project-case-title">Vertex AI Talent Mapping Engine</h3>
-          <p class="case-lead">HR and role data is embedded on Vertex AI, indexed in the Matching Engine for semantic search, and exposed through FastAPI on Cloud Run; Pub/Sub drives refresh and downstream jobs.</p>
+        <div id="skill-assessment-api" class="project-diagram-block">
+          <h3 class="project-case-title">Skill Assessment API — architecture</h3>
+          <p class="case-lead">REST API on <strong>FastAPI</strong> with sessions, assessments, gap analysis vs skill standards, and <strong>OpenAI</strong> GPT-4 completions—documented for consumers via Swagger and ReDoc.</p>
           <div class="case-layout">
             <div class="pipeline-panel">
-              <h4 class="diagram-block-title">Data flow (conceptual)</h4>
-              <div class="diagram-surface diagram-surface--snug" role="img" aria-label="HR data through embeddings Matching Engine FastAPI Pub Sub">
+              <h4 class="diagram-block-title">Layers (conceptual)</h4>
+              <div class="diagram-surface diagram-surface--snug" role="img" aria-label="Client through FastAPI models services to storage and endpoints">
                 <div class="diagram-scroll">
-                  <svg class="diagram-flow-svg diagram-flow-svg--vertex" viewBox="0 0 820 168" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+                  <svg class="diagram-flow-svg diagram-flow-svg--skill" viewBox="0 0 880 152" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
                     <defs>
-                      <marker id="vtx-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                      <marker id="sa-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
                         <path d="M0,0 L7,3.5 L0,7 Z" fill="#4b5563" />
                       </marker>
                     </defs>
-                    <rect x="10" y="40" width="120" height="88" rx="18" class="flow-rect flow-rect--gray" />
-                    <text x="70" y="72" text-anchor="middle" class="flow-t">HR data</text>
-                    <text x="70" y="92" text-anchor="middle" class="flow-sub">Candidates · roles</text>
-                    <line x1="130" y1="84" x2="152" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#vtx-arrow)" />
-                    <rect x="152" y="36" width="132" height="96" rx="18" class="flow-rect flow-rect--ai" />
-                    <text x="218" y="68" text-anchor="middle" class="flow-t">Embeddings</text>
-                    <text x="218" y="88" text-anchor="middle" class="flow-sub">Vertex AI models</text>
-                    <text x="218" y="108" text-anchor="middle" class="flow-sub">Semantic vectors</text>
-                    <line x1="284" y1="84" x2="306" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#vtx-arrow)" />
-                    <rect x="306" y="32" width="168" height="104" rx="18" class="flow-rect flow-rect--blue" />
-                    <text x="390" y="60" text-anchor="middle" class="flow-t">Matching Engine</text>
-                    <text x="390" y="80" text-anchor="middle" class="flow-sub">Index · similarity search</text>
-                    <text x="390" y="100" text-anchor="middle" class="flow-sub">Ranked talent pools</text>
-                    <line x1="474" y1="84" x2="496" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#vtx-arrow)" />
-                    <rect x="496" y="36" width="160" height="96" rx="18" class="flow-rect flow-rect--purple" />
-                    <text x="576" y="68" text-anchor="middle" class="flow-t">FastAPI</text>
-                    <text x="576" y="88" text-anchor="middle" class="flow-sub">Cloud Run · REST</text>
-                    <text x="576" y="108" text-anchor="middle" class="flow-sub">Autoscaling API</text>
-                    <line x1="656" y1="84" x2="678" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#vtx-arrow)" />
-                    <rect x="678" y="44" width="132" height="80" rx="18" class="flow-rect flow-rect--green" />
-                    <text x="744" y="76" text-anchor="middle" class="flow-t">Pub/Sub</text>
-                    <text x="744" y="96" text-anchor="middle" class="flow-sub">Event triggers</text>
+                    <rect x="6" y="44" width="88" height="80" rx="16" class="flow-rect flow-rect--gray" />
+                    <text x="50" y="74" text-anchor="middle" class="flow-t">Client</text>
+                    <text x="50" y="94" text-anchor="middle" class="flow-sub">REST · Swagger</text>
+                    <line x1="94" y1="84" x2="112" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#sa-arrow)" />
+                    <rect x="112" y="32" width="118" height="104" rx="16" class="flow-rect flow-rect--purple" />
+                    <text x="171" y="62" text-anchor="middle" class="flow-t">FastAPI</text>
+                    <text x="171" y="82" text-anchor="middle" class="flow-sub">main.py · routes</text>
+                    <text x="171" y="100" text-anchor="middle" class="flow-sub">Validation · responses</text>
+                    <line x1="230" y1="84" x2="248" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#sa-arrow)" />
+                    <rect x="248" y="40" width="124" height="88" rx="16" class="flow-rect flow-rect--green" />
+                    <text x="310" y="68" text-anchor="middle" class="flow-t">models · config</text>
+                    <text x="310" y="88" text-anchor="middle" class="flow-sub">Pydantic · standards</text>
+                    <line x1="372" y1="84" x2="390" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#sa-arrow)" />
+                    <rect x="390" y="28" width="188" height="112" rx="16" class="flow-rect flow-rect--ai" />
+                    <text x="484" y="56" text-anchor="middle" class="flow-t">Core services</text>
+                    <text x="484" y="76" text-anchor="middle" class="flow-sub">OpenAI svc · Assessment</text>
+                    <text x="484" y="94" text-anchor="middle" class="flow-sub">Gap analysis · scoring</text>
+                    <text x="484" y="112" text-anchor="middle" class="flow-sub">Learning paths</text>
+                    <line x1="578" y1="84" x2="596" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#sa-arrow)" />
+                    <rect x="596" y="36" width="138" height="96" rx="16" class="flow-rect flow-rect--blue" />
+                    <text x="665" y="64" text-anchor="middle" class="flow-t">State &amp; APIs</text>
+                    <text x="665" y="84" text-anchor="middle" class="flow-sub">Sessions · skill matrix</text>
+                    <text x="665" y="104" text-anchor="middle" class="flow-sub">OpenAI GPT-4</text>
+                    <line x1="734" y1="84" x2="752" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#sa-arrow)" />
+                    <rect x="752" y="48" width="122" height="72" rx="16" class="flow-rect flow-rect--gray" />
+                    <text x="813" y="76" text-anchor="middle" class="flow-t">Endpoints</text>
+                    <text x="813" y="96" text-anchor="middle" class="flow-sub">/session · /gap…</text>
                   </svg>
                 </div>
                 <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> Source</li>
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> Embeddings</li>
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Matching</li>
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> API</li>
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Events</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> Client / routes</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> API framework</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Models &amp; config</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> Services</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Storage / external</li>
                 </ul>
               </div>
               <ul class="case-bullets">
-                <li><strong>Matching:</strong> embedding models + Matching Engine for candidate ↔ role similarity at scale.</li>
-                <li><strong>Serving:</strong> FastAPI on Cloud Run with autoscaling; Pub/Sub for asynchronous updates and triggers.</li>
+                <li><strong>OpenAI service:</strong> conversations, Q&amp;A, and session history coordinated with assessment and gap modules.</li>
+                <li><strong>Quality:</strong> LLM output evaluation for benchmarking answer quality across prompt versions.</li>
               </ul>
             </div>
             <div class="arch-panel">
               <h4 class="diagram-block-title">Architecture diagram</h4>
               <figure class="diagram-figure diagram-surface diagram-surface--snug">
-                <a href="assets/vertex-talent-mapping-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame">
-                  <img src="assets/vertex-talent-mapping-architecture.png" alt="Vertex talent mapping: HR data, embeddings, Matching Engine, FastAPI on Cloud Run, Pub Sub event triggers" loading="lazy" decoding="async" />
+                <a href="/assets/skill-assessment-api-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame diagram-frame--dark">
+                  <img src="/assets/skill-assessment-api-architecture.png" alt="Skill Assessment API architecture: Client, FastAPI, models and config, services, storage, OpenAI API, REST endpoints" loading="lazy" decoding="async" />
                 </a>
-                <figcaption class="diagram-caption">Exported flow aligned with the conceptual stack—open image for full size.</figcaption>
+                <figcaption class="diagram-caption">Full stack diagram—click to open full size.</figcaption>
                 <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> Source data</li>
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> Embeddings</li>
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Matching &amp; index</li>
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> API layer</li>
-                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Events</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> API / framework</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Models &amp; config</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> Services</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--env"></span> Storage</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> External API</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> Endpoints</li>
                 </ul>
               </figure>
               <div class="case-chips" aria-label="Technologies">
-                <span class="chip">Vertex AI</span>
-                <span class="chip">Matching Engine</span>
                 <span class="chip">FastAPI</span>
-                <span class="chip">Cloud Run</span>
-                <span class="chip">Pub/Sub</span>
+                <span class="chip">OpenAI</span>
+                <span class="chip">Pydantic</span>
+                <span class="chip">Swagger</span>
+                <span class="chip">pytest</span>
               </div>
             </div>
           </div>
@@ -539,8 +540,8 @@
             <div class="arch-panel">
               <h4 class="diagram-block-title">Architecture diagram</h4>
               <figure class="diagram-figure diagram-surface diagram-surface--snug">
-                <a href="assets/tech-pack-generator-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame diagram-frame--dark">
-                  <img src="assets/tech-pack-generator-architecture.png" alt="Tech Pack Generator: Streamlit orchestrator, workflow steps, OpenCV warp, GPT-4o-mini and ReportLab PDF, uploads and outputs, final logo_techpack.pdf" loading="lazy" decoding="async" />
+                <a href="/assets/tech-pack-generator-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame diagram-frame--dark">
+                  <img src="/assets/tech-pack-generator-architecture.png" alt="Tech Pack Generator: Streamlit orchestrator, workflow steps, OpenCV warp, GPT-4o-mini and ReportLab PDF, uploads and outputs, final logo_techpack.pdf" loading="lazy" decoding="async" />
                 </a>
                 <figcaption class="diagram-caption">Full dark-canvas diagram from design—click for full size.</figcaption>
                 <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
@@ -615,7 +616,7 @@
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/maryam-siddiqui-35280621a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a class="btn btn-ghost" href="https://github.com/maryamsid00196" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-        <p class="resume-note"><a href="Maryam_Siddiqui_Resume.pdf" download>Download resume (PDF)</a></p>
+        <p class="resume-note"><a href="/Maryam_Siddiqui_Resume.pdf" download>Download resume (PDF)</a></p>
       </div>
     </section>
   </main>
@@ -626,6 +627,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>
