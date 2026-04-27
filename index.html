@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Maryam Siddiqui — AI/Backend Engineer. LLMs, RAG, MCP systems, and cloud-native architecture." />
+  <title>Maryam Siddiqui · AI & Backend Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#">MS</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-kicker">Dubai, UAE</p>
+          <h1>Maryam Siddiqui</h1>
+          <p class="hero-title">AI / Backend Engineer</p>
+          <p class="hero-tagline">LLMs, RAG &amp; MCP systems · Cloud-native architecture · Production AI from idea to deployment</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:siddiquimaryam234@gmail.com">Email me</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/maryam-siddiqui-35280621a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/maryamsid00196" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo-frame">
+            <img
+              class="hero-photo"
+              src="assets/hero-portrait.png"
+              alt="Maryam Siddiqui at the Youth &amp; AI Summit, Riyadh, beside the event banner"
+              width="900"
+              height="1200"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-about">
+      <div class="container">
+        <h2 class="section-title">Professional summary</h2>
+        <div class="prose about-grid">
+          <p>AI/Backend Engineer with <strong>4+ years</strong> building production-grade LLM systems, RAG pipelines, agentic AI (MCP-compatible), and scalable cloud-native architectures.</p>
+          <p>Experienced translating business requirements into deployed AI solutions—from document automation processing <strong>50,000+ files</strong> to real-time Slack decision engines with verified <strong>40% effort reduction</strong>.</p>
+          <p>Deep Python expertise across FastAPI, AWS, and OpenAI and Bedrock. Familiar with Model Context Protocol patterns for connecting LLMs to tools and data. Focus on scalability, reliability, and performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <article class="job">
+          <header class="job-header">
+            <div>
+              <h3 class="job-role">Software Engineer (Backend &amp; AI)</h3>
+              <p class="job-company">DPL</p>
+            </div>
+            <p class="job-meta"><time datetime="2024-06">Jun 2024</time> – Present · Dubai, UAE</p>
+          </header>
+
+          <div class="job-block">
+            <h4 class="job-project">iApartments Support Automation Slack Bot</h4>
+            <ul>
+              <li>Conversational night-support bot using CrewAI agents on Amazon Bedrock (DeepSeek), MCP-compatible tool routing to AWS Lambda.</li>
+              <li>Four environments (Tooling, QA, Prod, Demo) via AWS CDK, GitHub CI/CD, cross-account IAM; <strong>2,000+</strong> daily messages, <strong>99.9%</strong> uptime, CloudWatch observability.</li>
+              <li>Reported <strong>40%</strong> reduction in manual support effort; <strong>90%+</strong> pytest coverage; Swagger/OpenAPI docs.</li>
+              <li>See <a href="#slack-bot-architecture">diagram &amp; architecture</a> for the full flow.</li>
+            </ul>
+          </div>
+
+          <div class="job-block">
+            <h4 class="job-project">RAG Document Evaluation Platform</h4>
+            <ul>
+              <li>FastAPI + ChromaDB backend with multi-persona evaluation (legal, financial, editorial) using Gemini and OpenAI, plus LLM output evaluation for iterative quality.</li>
+              <li>Scaled to <strong>10,000+</strong> API requests/day at <strong>99.8%</strong> uptime; RAGAS-style prompt evaluation for retrieval and generation benchmarks.</li>
+            </ul>
+          </div>
+
+          <div class="job-block">
+            <h4 class="job-project">NATJAN Invoice Automation</h4>
+            <ul>
+              <li>End-to-end workflow from ~<strong>400 hrs/week</strong> manual review to a few hours of monitoring: S3 triggers, Google Doc AI OCR, Step Functions, Lambda, SNS.</li>
+            </ul>
+          </div>
+
+          <div class="job-block">
+            <h4 class="job-project">Quranic text verification</h4>
+            <ul>
+              <li>Arabic text pipeline: image upload → Google Vision OCR → diacritics stripping → <strong>LCS</strong> match against a verified dictionary → <strong>OpenCV</strong> bounding-box overlays → accuracy report; <strong>Flask</strong> on <strong>AWS EC2</strong>.</li>
+              <li>See <a href="#quran-verification">diagram &amp; architecture</a> for the full flow.</li>
+            </ul>
+          </div>
+          <div class="job-block">
+            <h4 class="job-project">Power BI IoT dashboards</h4>
+            <ul>
+              <li>Real-time Power BI over iApartments live IoT data (AWS IoT Core, Athena, Glue) for business self-serve analytics.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job job-past">
+          <header class="job-header">
+            <div>
+              <h3 class="job-role">Junior Software Engineer (Backend &amp; AI)</h3>
+              <p class="job-company">Codiux</p>
+            </div>
+            <p class="job-meta"><time datetime="2022-07">Jul 2022</time> – <time datetime="2024-06">Jun 2024</time></p>
+          </header>
+          <ul>
+            <li>AI resume parser at <strong>92%</strong> accuracy; AWS Lambda, API Gateway, S3, pytest, Swagger.</li>
+            <li>OpenAI GPT-3 integrations; Django REST Framework APIs with strong test coverage.</li>
+            <li>Celery, Redis, Docker; Flower and CloudWatch for queue monitoring.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="quran-verification" class="section section-case" aria-labelledby="quran-heading">
+      <div class="container">
+        <h2 id="quran-heading" class="section-title">Case study: Quranic text verification</h2>
+        <p class="case-lead">End-to-end pipeline that takes an image of Quranic verses (<span lang="ar" dir="rtl">آيات</span>), compares cloud OCR output to a canonical text source, and returns both a <strong>marked-up image</strong> and a structured list of <strong>detected mistakes</strong>.</p>
+
+        <div class="case-layout">
+          <div class="pipeline-panel">
+            <h3 class="diagram-block-title">Pipeline (conceptual)</h3>
+            <div class="diagram-surface" role="img" aria-label="Pipeline from image input through OCR, cleaning, LCS verification, OpenCV overlay, to processed image and mistake list">
+              <div class="diagram-scroll">
+                <svg class="diagram-flow-svg" viewBox="0 0 980 188" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+                  <defs>
+                    <marker id="q-arrow-solid" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                      <path d="M0,0 L7,3.5 L0,7 Z" fill="#4b5563" />
+                    </marker>
+                  </defs>
+                  <rect x="6" y="44" width="102" height="100" rx="18" class="flow-rect flow-rect--gray" />
+                  <text x="57" y="78" text-anchor="middle" class="flow-t">Image of Ayat</text>
+                  <text x="57" y="98" text-anchor="middle" class="flow-sub">Upload · input</text>
+                  <line x1="108" y1="94" x2="128" y2="94" stroke="#4b5563" stroke-width="1.75" marker-end="url(#q-arrow-solid)" />
+                  <rect x="128" y="36" width="124" height="116" rx="18" class="flow-rect flow-rect--purple" />
+                  <text x="190" y="72" text-anchor="middle" class="flow-t">Flask on AWS</text>
+                  <text x="190" y="92" text-anchor="middle" class="flow-sub">Request · orchestration</text>
+                  <text x="190" y="112" text-anchor="middle" class="flow-sub">EC2 · routing</text>
+                  <line x1="252" y1="94" x2="272" y2="94" stroke="#4b5563" stroke-width="1.75" marker-end="url(#q-arrow-solid)" />
+                  <rect x="272" y="40" width="118" height="108" rx="18" class="flow-rect flow-rect--ai" />
+                  <text x="331" y="76" text-anchor="middle" class="flow-t">Google Vision</text>
+                  <text x="331" y="96" text-anchor="middle" class="flow-sub">OCR · extract text</text>
+                  <line x1="390" y1="94" x2="410" y2="94" stroke="#4b5563" stroke-width="1.75" marker-end="url(#q-arrow-solid)" />
+                  <rect x="410" y="48" width="100" height="92" rx="18" class="flow-rect flow-rect--green" />
+                  <text x="460" y="82" text-anchor="middle" class="flow-t">Data cleaning</text>
+                  <text x="460" y="102" text-anchor="middle" class="flow-sub">Normalize · strip marks</text>
+                  <line x1="510" y1="94" x2="530" y2="94" stroke="#4b5563" stroke-width="1.75" marker-end="url(#q-arrow-solid)" />
+                  <rect x="530" y="32" width="138" height="124" rx="18" class="flow-rect flow-rect--blue" />
+                  <text x="599" y="68" text-anchor="middle" class="flow-t">LCS · dictionary</text>
+                  <text x="599" y="88" text-anchor="middle" class="flow-sub">Source of truth · diff</text>
+                  <text x="599" y="108" text-anchor="middle" class="flow-sub">Error detection</text>
+                  <line x1="668" y1="94" x2="688" y2="94" stroke="#4b5563" stroke-width="1.75" marker-end="url(#q-arrow-solid)" />
+                  <rect x="688" y="40" width="108" height="108" rx="18" class="flow-rect flow-rect--ai" />
+                  <text x="742" y="76" text-anchor="middle" class="flow-t">OpenCV</text>
+                  <text x="742" y="96" text-anchor="middle" class="flow-sub">Bounding boxes · overlay</text>
+                  <line x1="796" y1="94" x2="816" y2="94" stroke="#4b5563" stroke-width="1.75" marker-end="url(#q-arrow-solid)" />
+                  <rect x="816" y="40" width="100" height="108" rx="18" class="flow-rect flow-rect--gray" />
+                  <text x="866" y="76" text-anchor="middle" class="flow-t">Outputs</text>
+                  <text x="866" y="96" text-anchor="middle" class="flow-sub">Marked image · mistakes</text>
+                </svg>
+              </div>
+              <ul class="diagram-legend" aria-label="Diagram legend">
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> Orchestration</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Text prep</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> Vision &amp; CV</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Truth &amp; diff</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> I/O &amp; delivery</li>
+              </ul>
+            </div>
+            <ul class="case-bullets">
+              <li><strong>Dictionary:</strong> canonical ayah text for alignment—not generative “guessing.”</li>
+              <li><strong>LCS:</strong> longest common subsequence style diffing for robust Arabic comparison after normalization.</li>
+              <li><strong>OpenCV:</strong> bounding boxes on the original image where OCR / text disagrees with the source of truth.</li>
+            </ul>
+          </div>
+
+          <div class="arch-panel">
+            <h3 class="diagram-block-title">Architecture diagram</h3>
+            <figure class="diagram-figure diagram-surface">
+              <a href="assets/quran-verification-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame diagram-frame--dark">
+                <img src="assets/quran-verification-architecture.png" alt="Quranic verification: image of ayat into AWS Flask with dictionary, text processing, LCS error detection, OpenCV overlays; Google Vision OCR path; outputs processed image and extracted mistakes" loading="lazy" decoding="async" />
+              </a>
+              <figcaption class="diagram-caption">Updated architecture: AWS and Flask boundaries, Vision OCR, LCS vs source of truth, OpenCV plotting. Dark canvas diagram—click to open full size.</figcaption>
+              <ul class="diagram-legend diagram-legend--compact" aria-label="Legend for diagram colors">
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> App core</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> AI / Vision</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Data / truth</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> I/O</li>
+              </ul>
+            </figure>
+            <div class="case-chips" aria-label="Technologies">
+              <span class="chip">Flask</span>
+              <span class="chip">AWS</span>
+              <span class="chip">Google Vision</span>
+              <span class="chip">LCS</span>
+              <span class="chip">OpenCV</span>
+              <span class="chip">Arabic NLP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slack-bot-architecture" class="section section-case section-slack-case" aria-labelledby="slack-arch-heading">
+      <div class="container">
+        <h2 id="slack-arch-heading" class="section-title">Case study: iApartments Slack support bot</h2>
+        <p class="case-lead">AWS CDK–organized stacks for <strong>ingestion</strong> (Slack slash commands → API Gateway → auth), <strong>AI core</strong> in a Tooling VPC (orchestrator Lambda, Amazon Bedrock with Llama&nbsp;4 Maverick&nbsp;17B, OpenSearch retrieval, PII masking before the LLM), and <strong>isolated environments</strong> (PROD, QA, DEMO) where tool Lambdas execute. Cross-account IAM, GitHub Actions, and CloudWatch tie the system together.</p>
+
+        <div class="case-layout">
+          <div class="pipeline-panel">
+            <h3 class="diagram-block-title">CDK stacks (conceptual)</h3>
+            <div class="diagram-surface" role="img" aria-label="Three CDK stacks: ingestion, AI core in VPC, environments PROD QA DEMO">
+              <div class="diagram-scroll">
+                <svg class="diagram-flow-svg diagram-flow-svg--slack" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+                  <defs>
+                    <marker id="s-arrow-solid" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                      <path d="M0,0 L7,3.5 L0,7 Z" fill="#4b5563" />
+                    </marker>
+                  </defs>
+                  <rect x="8" y="36" width="188" height="120" rx="18" class="flow-rect flow-rect--purple" />
+                  <text x="102" y="68" text-anchor="middle" class="flow-t">CDK stack · ingestion</text>
+                  <text x="102" y="90" text-anchor="middle" class="flow-sub">User Slack · slash cmd</text>
+                  <text x="102" y="108" text-anchor="middle" class="flow-sub">API Gateway · Auth Lambda</text>
+                  <text x="102" y="126" text-anchor="middle" class="flow-sub">Slack sig · Cognito · Secrets</text>
+                  <line x1="196" y1="96" x2="218" y2="96" stroke="#4b5563" stroke-width="1.75" marker-end="url(#s-arrow-solid)" />
+                  <rect x="218" y="28" width="360" height="136" rx="18" class="flow-rect flow-rect--green" />
+                  <text x="398" y="56" text-anchor="middle" class="flow-t">CDK stack · AI core (Tooling VPC)</text>
+                  <text x="398" y="78" text-anchor="middle" class="flow-sub">Orchestrator Lambda · routes intent</text>
+                  <text x="398" y="96" text-anchor="middle" class="flow-sub">Bedrock · Llama 4 Maverick 17B · NLP</text>
+                  <text x="398" y="114" text-anchor="middle" class="flow-sub">OpenSearch · knowledge retrieval</text>
+                  <text x="398" y="132" text-anchor="middle" class="flow-sub">Data masking · PII stripped before LLM</text>
+                  <line x1="578" y1="96" x2="600" y2="96" stroke="#4b5563" stroke-width="1.75" marker-end="url(#s-arrow-solid)" />
+                  <rect x="600" y="36" width="292" height="120" rx="18" class="flow-rect flow-rect--env" />
+                  <text x="746" y="68" text-anchor="middle" class="flow-t">CDK stack · environments</text>
+                  <text x="746" y="90" text-anchor="middle" class="flow-sub">Dispatch to PROD · QA · DEMO</text>
+                  <text x="746" y="108" text-anchor="middle" class="flow-sub">Reboot Lambda · lock codes Lambda</text>
+                  <text x="746" y="126" text-anchor="middle" class="flow-sub">Isolated per environment</text>
+                </svg>
+              </div>
+              <ul class="diagram-legend" aria-label="Diagram legend">
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> Ingestion</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> AI core (VPC)</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--env"></span> Environments</li>
+              </ul>
+            </div>
+            <ul class="case-bullets">
+              <li><strong>Ingestion:</strong> slash commands hit API Gateway; auth Lambda validates Slack signatures, Cognito, and Secrets Manager.</li>
+              <li><strong>AI core:</strong> orchestration to Bedrock + retrieval; dashed-style loops in the full diagram show OpenSearch feedback and HTTPS responses to Slack.</li>
+              <li><strong>Deploy:</strong> all stacks via CDK, cross-account IAM, GitHub Actions CI/CD, CloudWatch observability.</li>
+            </ul>
+          </div>
+
+          <div class="arch-panel">
+            <h3 class="diagram-block-title">Architecture diagram</h3>
+            <figure class="diagram-figure diagram-surface">
+              <a href="assets/slack-bot-cdk-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame">
+                <img src="assets/slack-bot-cdk-architecture.png" alt="CDK stack diagram: ingestion with User Slack API Gateway and Auth Lambda; AI core with Orchestrator Bedrock OpenSearch and data masking; environments PROD QA DEMO with Lambdas; footer CDK cross-account IAM GitHub Actions CloudWatch" loading="lazy" decoding="async" />
+              </a>
+              <figcaption class="diagram-caption">Stack boundaries and data flow (open image for full size). <strong>Solid lines:</strong> primary request path. <strong>Dashed lines:</strong> responses and retrieval loops where shown in source.</figcaption>
+              <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> Ingestion</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> AI core</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--env"></span> Environments</li>
+                <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> Platform / CI/CD</li>
+              </ul>
+            </figure>
+            <div class="case-chips" aria-label="Technologies">
+              <span class="chip">AWS CDK</span>
+              <span class="chip">Lambda</span>
+              <span class="chip">API Gateway</span>
+              <span class="chip">Bedrock</span>
+              <span class="chip">OpenSearch</span>
+              <span class="chip">Cognito</span>
+              <span class="chip">Secrets Manager</span>
+              <span class="chip">CrewAI</span>
+              <span class="chip">GitHub Actions</span>
+              <span class="chip">CloudWatch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Key AI projects</h2>
+        <ul class="project-cards">
+          <li class="project-card">
+            <h3>Skill Assessment API</h3>
+            <p class="project-stack">FastAPI · OpenAI</p>
+            <p>GPT-driven interactive assessments, gap analysis, readiness scoring, learning paths, and LLM output evaluation for answer quality.</p>
+          </li>
+          <li class="project-card">
+            <h3>DeepFakeNet</h3>
+            <p class="project-stack">Django · FSGAN</p>
+            <p>Production face-swapping platform with auth, PostgreSQL, media processing, pytest, and CI/CD.</p>
+            <p class="project-diagram-link"><a href="#deepfake-net">Architecture diagram ↓</a></p>
+          </li>
+          <li class="project-card">
+            <h3>Vertex AI Talent Mapping Engine</h3>
+            <p class="project-stack">Vertex AI · FastAPI · Cloud Run · Pub/Sub</p>
+            <p>Candidate-to-role matching with embeddings and semantic search; Vertex AI Matching Engine plus FastAPI on Cloud Run with Pub/Sub triggers for real-time updates.</p>
+            <p class="project-diagram-link"><a href="#vertex-talent-mapping">Architecture overview ↓</a></p>
+          </li>
+          <li class="project-card">
+            <h3>Tech Pack Generator</h3>
+            <p class="project-stack">Streamlit · OpenCV · GPT-4o-mini · ReportLab</p>
+            <p>Four-step workflow: Excel and cap assets in, perspective warp via OpenCV, GPT-4o-mini descriptions, ReportLab PDF tech packs for fashion clients.</p>
+            <p class="project-diagram-link"><a href="#tech-pack-generator">Architecture diagram ↓</a></p>
+          </li>
+        </ul>
+
+        <div id="deepfake-net" class="project-diagram-block">
+          <h3 class="project-case-title">DeepFakeNet — architecture</h3>
+          <p class="case-lead">Django&nbsp;5 app: browser hits the URL router, auth and main views branch to forms and templates, and the FSGAN-backed AI engine processes uploads into PostgreSQL-backed media records.</p>
+          <div class="case-layout">
+            <div class="pipeline-panel">
+              <h4 class="diagram-block-title">Request path (conceptual)</h4>
+              <div class="diagram-surface diagram-surface--snug" role="img" aria-label="Browser to Django to FSGAN to database">
+                <div class="diagram-scroll">
+                  <svg class="diagram-flow-svg diagram-flow-svg--project" viewBox="0 0 700 128" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+                    <defs>
+                      <marker id="df-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <path d="M0,0 L7,3.5 L0,7 Z" fill="#4b5563" />
+                      </marker>
+                    </defs>
+                    <rect x="8" y="36" width="88" height="72" rx="16" class="flow-rect flow-rect--gray" />
+                    <text x="52" y="64" text-anchor="middle" class="flow-t">Browser</text>
+                    <text x="52" y="84" text-anchor="middle" class="flow-sub">HTTP · UI</text>
+                    <line x1="96" y1="72" x2="118" y2="72" stroke="#4b5563" stroke-width="1.75" marker-end="url(#df-arrow)" />
+                    <rect x="118" y="24" width="168" height="96" rx="16" class="flow-rect flow-rect--purple" />
+                    <text x="202" y="52" text-anchor="middle" class="flow-t">Django 5 · urls.py</text>
+                    <text x="202" y="72" text-anchor="middle" class="flow-sub">Auth · main views · forms</text>
+                    <text x="202" y="92" text-anchor="middle" class="flow-sub">Templates · static</text>
+                    <line x1="286" y1="72" x2="308" y2="72" stroke="#4b5563" stroke-width="1.75" marker-end="url(#df-arrow)" />
+                    <rect x="308" y="32" width="140" height="80" rx="16" class="flow-rect flow-rect--ai" />
+                    <text x="378" y="60" text-anchor="middle" class="flow-t">AI engine</text>
+                    <text x="378" y="80" text-anchor="middle" class="flow-sub">Face swap · FSGAN</text>
+                    <line x1="448" y1="72" x2="470" y2="72" stroke="#4b5563" stroke-width="1.75" marker-end="url(#df-arrow)" />
+                    <rect x="470" y="36" width="120" height="72" rx="16" class="flow-rect flow-rect--blue" />
+                    <text x="530" y="64" text-anchor="middle" class="flow-t">PostgreSQL</text>
+                    <text x="530" y="84" text-anchor="middle" class="flow-sub">Users · media</text>
+                  </svg>
+                </div>
+                <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> Client</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> Django core</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> AI</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> DB</li>
+                </ul>
+              </div>
+              <ul class="case-bullets">
+                <li><strong>Routing:</strong> <code>fyp/urls.py</code> sends traffic to auth views, main upload/process views, and the FSGAN pipeline.</li>
+                <li><strong>Stack:</strong> pytest, CI/CD, and Swagger-style API docs for a production-ready deployment.</li>
+              </ul>
+            </div>
+            <div class="arch-panel">
+              <h4 class="diagram-block-title">Architecture diagram</h4>
+              <figure class="diagram-figure diagram-surface diagram-surface--snug">
+                <a href="assets/deepfake-net-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame">
+                  <img src="assets/deepfake-net-architecture.png" alt="DeepFakeNet architecture: browser client, Django 5 URL router, auth views, forms, main views, AI engine FSGAN, templates, static assets, PostgreSQL, env config" loading="lazy" decoding="async" />
+                </a>
+                <figcaption class="diagram-caption">Full pastel diagram—click to open. <strong>Solid</strong> lines: primary request flow; <strong>dashed</strong>: responses/config where drawn in source.</figcaption>
+                <ul class="diagram-legend diagram-legend--compact" aria-label="Diagram legend">
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> Django core</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Auth &amp; forms</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> AI processing</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Database</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> UI &amp; config</li>
+                </ul>
+              </figure>
+              <div class="case-chips" aria-label="Technologies">
+                <span class="chip">Django 5</span>
+                <span class="chip">FSGAN</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">pytest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="vertex-talent-mapping" class="project-diagram-block">
+          <h3 class="project-case-title">Vertex AI Talent Mapping Engine</h3>
+          <p class="case-lead">HR and role data is embedded on Vertex AI, indexed in the Matching Engine for semantic search, and exposed through FastAPI on Cloud Run; Pub/Sub drives refresh and downstream jobs.</p>
+          <div class="case-layout">
+            <div class="pipeline-panel">
+              <h4 class="diagram-block-title">Data flow (conceptual)</h4>
+              <div class="diagram-surface diagram-surface--snug" role="img" aria-label="HR data through embeddings Matching Engine FastAPI Pub Sub">
+                <div class="diagram-scroll">
+                  <svg class="diagram-flow-svg diagram-flow-svg--vertex" viewBox="0 0 820 168" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+                    <defs>
+                      <marker id="vtx-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <path d="M0,0 L7,3.5 L0,7 Z" fill="#4b5563" />
+                      </marker>
+                    </defs>
+                    <rect x="10" y="40" width="120" height="88" rx="18" class="flow-rect flow-rect--gray" />
+                    <text x="70" y="72" text-anchor="middle" class="flow-t">HR data</text>
+                    <text x="70" y="92" text-anchor="middle" class="flow-sub">Candidates · roles</text>
+                    <line x1="130" y1="84" x2="152" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#vtx-arrow)" />
+                    <rect x="152" y="36" width="132" height="96" rx="18" class="flow-rect flow-rect--ai" />
+                    <text x="218" y="68" text-anchor="middle" class="flow-t">Embeddings</text>
+                    <text x="218" y="88" text-anchor="middle" class="flow-sub">Vertex AI models</text>
+                    <text x="218" y="108" text-anchor="middle" class="flow-sub">Semantic vectors</text>
+                    <line x1="284" y1="84" x2="306" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#vtx-arrow)" />
+                    <rect x="306" y="32" width="168" height="104" rx="18" class="flow-rect flow-rect--blue" />
+                    <text x="390" y="60" text-anchor="middle" class="flow-t">Matching Engine</text>
+                    <text x="390" y="80" text-anchor="middle" class="flow-sub">Index · similarity search</text>
+                    <text x="390" y="100" text-anchor="middle" class="flow-sub">Ranked talent pools</text>
+                    <line x1="474" y1="84" x2="496" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#vtx-arrow)" />
+                    <rect x="496" y="36" width="160" height="96" rx="18" class="flow-rect flow-rect--purple" />
+                    <text x="576" y="68" text-anchor="middle" class="flow-t">FastAPI</text>
+                    <text x="576" y="88" text-anchor="middle" class="flow-sub">Cloud Run · REST</text>
+                    <text x="576" y="108" text-anchor="middle" class="flow-sub">Autoscaling API</text>
+                    <line x1="656" y1="84" x2="678" y2="84" stroke="#4b5563" stroke-width="1.75" marker-end="url(#vtx-arrow)" />
+                    <rect x="678" y="44" width="132" height="80" rx="18" class="flow-rect flow-rect--green" />
+                    <text x="744" y="76" text-anchor="middle" class="flow-t">Pub/Sub</text>
+                    <text x="744" y="96" text-anchor="middle" class="flow-sub">Event triggers</text>
+                  </svg>
+                </div>
+                <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> Source</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> Embeddings</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Matching</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> API</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Events</li>
+                </ul>
+              </div>
+              <ul class="case-bullets">
+                <li><strong>Matching:</strong> embedding models + Matching Engine for candidate ↔ role similarity at scale.</li>
+                <li><strong>Serving:</strong> FastAPI on Cloud Run with autoscaling; Pub/Sub for asynchronous updates and triggers.</li>
+              </ul>
+            </div>
+            <div class="arch-panel">
+              <h4 class="diagram-block-title">Architecture diagram</h4>
+              <figure class="diagram-figure diagram-surface diagram-surface--snug">
+                <a href="assets/vertex-talent-mapping-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame">
+                  <img src="assets/vertex-talent-mapping-architecture.png" alt="Vertex talent mapping: HR data, embeddings, Matching Engine, FastAPI on Cloud Run, Pub Sub event triggers" loading="lazy" decoding="async" />
+                </a>
+                <figcaption class="diagram-caption">Exported flow aligned with the conceptual stack—open image for full size.</figcaption>
+                <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--gray"></span> Source data</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> Embeddings</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Matching &amp; index</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> API layer</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Events</li>
+                </ul>
+              </figure>
+              <div class="case-chips" aria-label="Technologies">
+                <span class="chip">Vertex AI</span>
+                <span class="chip">Matching Engine</span>
+                <span class="chip">FastAPI</span>
+                <span class="chip">Cloud Run</span>
+                <span class="chip">Pub/Sub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tech-pack-generator" class="project-diagram-block">
+          <h3 class="project-case-title">Tech Pack Generator — architecture</h3>
+          <p class="case-lead">Streamlit <strong>app.py</strong> orchestrates a four-step wizard: pull Excel design data, upload logo and cap images, set dimensions, then run OpenCV homography plus GPT-4o-mini copy and ReportLab into <code>logo_techpack.pdf</code>.</p>
+          <div class="case-layout">
+            <div class="pipeline-panel">
+              <h4 class="diagram-block-title">Workflow (conceptual)</h4>
+              <div class="diagram-surface diagram-surface--snug" role="img" aria-label="Inputs to Streamlit steps to OpenCV and AI to PDF output">
+                <div class="diagram-scroll">
+                  <svg class="diagram-flow-svg diagram-flow-svg--project" viewBox="0 0 720 140" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+                    <defs>
+                      <marker id="tp-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                        <path d="M0,0 L7,3.5 L0,7 Z" fill="#4b5563" />
+                      </marker>
+                    </defs>
+                    <rect x="6" y="44" width="100" height="76" rx="16" class="flow-rect flow-rect--green" />
+                    <text x="56" y="72" text-anchor="middle" class="flow-t">Inputs</text>
+                    <text x="56" y="92" text-anchor="middle" class="flow-sub">Excel · logo · caps</text>
+                    <line x1="106" y1="82" x2="124" y2="82" stroke="#4b5563" stroke-width="1.75" marker-end="url(#tp-arrow)" />
+                    <rect x="124" y="28" width="148" height="108" rx="16" class="flow-rect flow-rect--purple" />
+                    <text x="198" y="56" text-anchor="middle" class="flow-t">app.py</text>
+                    <text x="198" y="76" text-anchor="middle" class="flow-sub">Streamlit · 4 steps</text>
+                    <text x="198" y="96" text-anchor="middle" class="flow-sub">Orchestration</text>
+                    <line x1="272" y1="82" x2="290" y2="82" stroke="#4b5563" stroke-width="1.75" marker-end="url(#tp-arrow)" />
+                    <rect x="290" y="36" width="156" height="92" rx="16" class="flow-rect flow-rect--ai" />
+                    <text x="368" y="64" text-anchor="middle" class="flow-t">OpenCV + AI</text>
+                    <text x="368" y="84" text-anchor="middle" class="flow-sub">Warp · GPT-4o-mini</text>
+                    <text x="368" y="104" text-anchor="middle" class="flow-sub">ReportLab PDF</text>
+                    <line x1="446" y1="82" x2="464" y2="82" stroke="#4b5563" stroke-width="1.75" marker-end="url(#tp-arrow)" />
+                    <rect x="464" y="40" width="124" height="84" rx="16" class="flow-rect flow-rect--blue" />
+                    <text x="526" y="70" text-anchor="middle" class="flow-t">uploads /</text>
+                    <text x="526" y="88" text-anchor="middle" class="flow-t">outputs</text>
+                    <line x1="588" y1="82" x2="606" y2="82" stroke="#4b5563" stroke-width="1.75" marker-end="url(#tp-arrow)" />
+                    <rect x="606" y="40" width="108" height="84" rx="16" class="flow-rect flow-rect--purple" />
+                    <text x="660" y="76" text-anchor="middle" class="flow-t">PDF</text>
+                    <text x="660" y="96" text-anchor="middle" class="flow-sub">Tech pack</text>
+                  </svg>
+                </div>
+                <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Inputs</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> Orchestrator</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> CV / AI</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Files</li>
+                </ul>
+              </div>
+              <ul class="case-bullets">
+                <li><strong>OpenCV:</strong> four-point homography for logo placement on cap imagery.</li>
+                <li><strong>Fallback:</strong> plain descriptions when no OpenAI API key is configured.</li>
+              </ul>
+            </div>
+            <div class="arch-panel">
+              <h4 class="diagram-block-title">Architecture diagram</h4>
+              <figure class="diagram-figure diagram-surface diagram-surface--snug">
+                <a href="assets/tech-pack-generator-architecture.png" target="_blank" rel="noopener noreferrer" class="diagram-frame diagram-frame--dark">
+                  <img src="assets/tech-pack-generator-architecture.png" alt="Tech Pack Generator: Streamlit orchestrator, workflow steps, OpenCV warp, GPT-4o-mini and ReportLab PDF, uploads and outputs, final logo_techpack.pdf" loading="lazy" decoding="async" />
+                </a>
+                <figcaption class="diagram-caption">Full dark-canvas diagram from design—click for full size.</figcaption>
+                <ul class="diagram-legend diagram-legend--compact" aria-label="Legend">
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--purple"></span> Orchestrator / output</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--green"></span> Inputs / storage</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--ai"></span> Image processing</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--blue"></span> Files I/O</li>
+                  <li><span class="diagram-legend-swatch diagram-legend-swatch--env"></span> AI / PDF</li>
+                </ul>
+              </figure>
+              <div class="case-chips" aria-label="Technologies">
+                <span class="chip">Streamlit</span>
+                <span class="chip">OpenCV</span>
+                <span class="chip">GPT-4o-mini</span>
+                <span class="chip">ReportLab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Technical skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>AI / ML</h3>
+            <p>LLMs, RAG, agentic AI, MCP, prompt engineering &amp; evaluation (RAGAS), OpenAI API, Bedrock, Vertex AI, Transformers, PyTorch, scikit-learn, ChromaDB, CrewAI</p>
+          </div>
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <p>Python, FastAPI, Django, DRF, microservices, REST APIs</p>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; DevOps</h3>
+            <p>AWS (Lambda, S3, API Gateway, ECR, Cognito, Athena, Step Functions, IoT Core, CDK, CloudWatch), GCP (Vertex AI, Cloud Run, Pub/Sub), Docker, CI/CD, GitHub Actions</p>
+          </div>
+          <div class="skill-group">
+            <h3>Data &amp; observability</h3>
+            <p>PostgreSQL, MySQL, MongoDB, Redis, Power BI, Athena, Glue; pytest, Swagger/OpenAPI, structured logging, SNS</p>
+          </div>
+          <div class="skill-group skill-group-wide">
+            <h3>Other</h3>
+            <p>Git, Jira, Celery, Agile/Scrum, Postman, Flower, Kubernetes (basic), distributed systems, load balancing, caching</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education &amp; recognition</h2>
+        <div class="edu-card">
+          <h3>BS Software Engineering</h3>
+          <p class="edu-school">University of Engineering &amp; Technology, Taxila</p>
+          <p class="edu-gpa">CGPA <strong>3.85</strong> / 4.0</p>
+        </div>
+        <div class="edu-highlight">
+          <span class="edu-badge" aria-hidden="true">🏅</span>
+          <p><strong>Fully funded delegate</strong> — NextGen 2030 Youth &amp; AI Summit, Riyadh, Saudi Arabia (represented Pakistan).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="container contact-inner">
+        <h2 class="section-title">Contact</h2>
+        <p>Open to roles and collaborations in AI systems, backend, and cloud.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:siddiquimaryam234@gmail.com">siddiquimaryam234@gmail.com</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/maryam-siddiqui-35280621a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/maryamsid00196" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <p class="resume-note"><a href="Maryam_Siddiqui_Resume.pdf" download>Download resume (PDF)</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Maryam Siddiqui</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
